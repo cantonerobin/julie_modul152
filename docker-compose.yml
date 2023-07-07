@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+    php-apache-environment:
+        image: php:8.0-apache
+        container_name: php-apache
+        restart: unless-stopped
+        volumes:
+            - ./src:/var/www/html/
+        ports:
+            - 8000:80
